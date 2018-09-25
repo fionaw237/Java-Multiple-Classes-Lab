@@ -33,4 +33,9 @@ public class Bus {
     public void removePassenger(Person person) {
         passengers.remove(person);
     }
+
+    public void pickUp(Person person, BusStop stop) {
+        stop.removeFromQueue(person);
+        addPassenger(person);
+    }
 }
